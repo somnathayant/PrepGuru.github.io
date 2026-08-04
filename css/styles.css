@@ -11583,24 +11583,19 @@ transform:scale(1.8);
 
 }
 }
-/* About Section */
-#about {
-    color: #ffffff;
-}
+#about .container{
 
-#about h2,
-#about h3,
-#about .section-heading {
-    color: #ffffff;
-    text-shadow:
-        0 0 8px rgba(0, 212, 255, 0.6),
-        0 0 20px rgba(0, 212, 255, 0.3);
-}
+    background: rgba(255,255,255,0.05);
 
-#about p {
-    color: rgba(255,255,255,0.92);
-    line-height: 1.9;
-    font-size: 1.1rem;
-    text-shadow:
-        0 0 4px rgba(255,255,255,0.15);
+    backdrop-filter: blur(18px);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    border-radius:20px;
+
+    padding:60px;
+
+    box-shadow:
+        0 0 40px rgba(0,212,255,.12);
+
 }
