@@ -11583,3 +11583,24 @@ transform:scale(1.8);
 
 }
 }
+/* About Section */
+#about {
+    color: #ffffff;
+}
+
+#about h2,
+#about h3,
+#about .section-heading {
+    color: #ffffff;
+    text-shadow:
+        0 0 8px rgba(0, 212, 255, 0.6),
+        0 0 20px rgba(0, 212, 255, 0.3);
+}
+
+#about p {
+    color: rgba(255,255,255,0.92);
+    line-height: 1.9;
+    font-size: 1.1rem;
+    text-shadow:
+        0 0 4px rgba(255,255,255,0.15);
+}
