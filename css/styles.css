@@ -11811,6 +11811,43 @@ transform:scale(1.8);
     animation:pulseAI 3s infinite;
 }
 
+.ai-orbit-container{
+
+    position:relative;
+    width:500px;
+    height:500px;
+    margin:auto;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+
+/* Center AI */
+
+.center-ai{
+
+    position:absolute;
+
+    font-size:45px;
+    font-weight:700;
+
+    color:#00d9ff;
+
+    text-shadow:
+    0 0 20px #00d9ff,
+    0 0 40px #00d9ff;
+
+    animation:pulseAI 2s infinite;
+
+    z-index:10;
+
+}
+
+
+
 /* Orbit */
 
 .orbit{
@@ -11818,7 +11855,6 @@ transform:scale(1.8);
     position:absolute;
 
     left:50%;
-
     top:50%;
 
     transform:translate(-50%,-50%);
@@ -11829,144 +11865,179 @@ transform:scale(1.8);
 
 }
 
-/* Rings */
+
+/* Sizes */
+
 
 .orbit1{
 
     width:170px;
-
     height:170px;
 
     animation:rotateCW 18s linear infinite;
 
 }
 
+
 .orbit2{
 
-    width:260px;
-
-    height:260px;
+    width:280px;
+    height:280px;
 
     animation:rotateCCW 25s linear infinite;
 
 }
 
+
 .orbit3{
 
-    width:350px;
-
-    height:350px;
+    width:390px;
+    height:390px;
 
     animation:rotateCW 35s linear infinite;
 
 }
 
-/* Labels */
+
+
+/* Skill bubbles */
 
 .orbit span{
 
     position:absolute;
 
-    background:#101820;
+    background:#071b34;
 
     color:#00d9ff;
 
-    padding:6px 14px;
+    padding:8px 16px;
 
     border-radius:20px;
 
-    border:1px solid rgba(0,217,255,.4);
+    border:1px solid rgba(0,217,255,.5);
 
-    font-size:13px;
+    font-size:14px;
 
     font-weight:600;
 
     white-space:nowrap;
 
-    box-shadow:0 0 15px rgba(0,217,255,.25);
+    box-shadow:
+    0 0 15px rgba(0,217,255,.35);
+
 
 }
 
-/* Orbit 1 */
 
-.orbit1 span:nth-child(1){top:-12px;left:50%;transform:translateX(-50%);}
-.orbit1 span:nth-child(2){top:50%;right:-40px;transform:translateY(-50%);}
-.orbit1 span:nth-child(3){bottom:-12px;left:50%;transform:translateX(-50%);}
-.orbit1 span:nth-child(4){top:50%;left:-40px;transform:translateY(-50%);}
 
-/* Orbit 2 */
+/* Keep text horizontal */
 
-.orbit2 span:nth-child(1){top:-12px;left:50%;transform:translateX(-50%);}
-.orbit2 span:nth-child(2){top:50%;right:-45px;transform:translateY(-50%);}
-.orbit2 span:nth-child(3){bottom:-12px;left:50%;transform:translateX(-50%);}
-.orbit2 span:nth-child(4){top:50%;left:-55px;transform:translateY(-50%);}
+.orbit span{
 
-/* Orbit 3 */
+    animation:counterRotate 18s linear infinite;
 
-.orbit3 span:nth-child(1){top:-12px;left:50%;transform:translateX(-50%);}
-.orbit3 span:nth-child(2){top:50%;right:-55px;transform:translateY(-50%);}
-.orbit3 span:nth-child(3){bottom:-12px;left:50%;transform:translateX(-50%);}
-.orbit3 span:nth-child(4){top:50%;left:-60px;transform:translateY(-50%);}
+}
 
-/* Animation */
+
+/* Positions */
+
+
+.orbit span:nth-child(1){
+
+    top:-15px;
+    left:50%;
+    transform:translateX(-50%);
+
+}
+
+
+.orbit span:nth-child(2){
+
+    right:-45px;
+    top:50%;
+    transform:translateY(-50%);
+
+}
+
+
+.orbit span:nth-child(3){
+
+    bottom:-15px;
+    left:50%;
+    transform:translateX(-50%);
+
+}
+
+
+.orbit span:nth-child(4){
+
+    left:-55px;
+    top:50%;
+    transform:translateY(-50%);
+
+}
+
+
+
+/* Animations */
+
 
 @keyframes rotateCW{
 
-    from{
+from{
+    transform:translate(-50%,-50%) rotate(0deg);
+}
 
-        transform:translate(-50%,-50%) rotate(0deg);
-
-    }
-
-    to{
-
-        transform:translate(-50%,-50%) rotate(360deg);
-
-    }
+to{
+    transform:translate(-50%,-50%) rotate(360deg);
+}
 
 }
+
+
 
 @keyframes rotateCCW{
 
-    from{
+from{
+    transform:translate(-50%,-50%) rotate(360deg);
+}
 
-        transform:translate(-50%,-50%) rotate(360deg);
-
-    }
-
-    to{
-
-        transform:translate(-50%,-50%) rotate(0deg);
-
-    }
+to{
+    transform:translate(-50%,-50%) rotate(0deg);
+}
 
 }
 
+
+
 @keyframes pulseAI{
 
-    0%{
 
-        box-shadow:
-        0 0 20px #00d9ff,
-        0 0 40px #00d9ff;
+0%{
 
-    }
+text-shadow:
+0 0 15px #00d9ff,
+0 0 30px #00d9ff;
 
-    50%{
+}
 
-        box-shadow:
-        0 0 35px #00d9ff,
-        0 0 80px #00d9ff,
-        0 0 120px #00d9ff;
 
-    }
+50%{
 
-    100%{
+text-shadow:
+0 0 40px #00d9ff,
+0 0 80px #00d9ff;
 
-        box-shadow:
-        0 0 20px #00d9ff,
-        0 0 40px #00d9ff;
+}
 
-    }
+
+100%{
+
+text-shadow:
+0 0 15px #00d9ff,
+0 0 30px #00d9ff;
+
+}
+
 
 }
