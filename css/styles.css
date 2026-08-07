@@ -11598,8 +11598,11 @@ transform:scale(1.8);
 ============================== */
 
 .masthead {
-    position: relative;
-    overflow: hidden;
+    min-height: 100vh;
+    padding-top: 80px;   /* space below navbar */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .masthead .container {
@@ -11612,10 +11615,10 @@ transform:scale(1.8);
 ============================== */
 
 .ai-animation {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    z-index: 1;
+   position: relative;
+    width: 650px;
+    height: 650px;
+    margin-top: 20px;   /* move up/down */
 }
 
 /* Glowing Nodes */
