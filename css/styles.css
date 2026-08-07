@@ -11587,15 +11587,5 @@ transform:scale(1.8);
 
     background: transparent;
 
-    backdrop-filter: blur(18px);
-
-    border:1px solid rgba(255,255,255,0.08);
-
-    border-radius:20px;
-
-    padding:60px;
-
-    box-shadow:
-        0 0 40px rgba(0,212,255,.12);
-
+   
 }
