@@ -10942,174 +10942,106 @@ p {
     margin-right: 0;
   }
 }
-/* ===========================
-   AI HERO SECTION
-=========================== */
+/* ================================
+   HOME PAGE / HERO BACKGROUND
+   ================================ */
+
+/* ================================
+   HERO / HOME PAGE
+   ================================ */
 
 header.masthead {
     position: relative;
-    overflow: hidden;
 
-    padding-top: 10.5rem;
-    padding-bottom: 6rem;
+    /* Move hero below the fixed navbar */
+    margin-top: 76px;
+
+    min-height: calc(100vh - 76px);
+
+    padding-top: 80px;
+    padding-bottom: 80px;
 
     text-align: center;
     color: #fff;
 
-    /* Remove background image */
-    background-image: none;
+    background-image: url("../assets/img/homepage.png");
+    background-repeat: no-repeat;
+    background-position: center top;
 
-    /* Premium AI Background */
-    background:
-        radial-gradient(circle at 15% 20%, rgba(0,255,255,.20), transparent 28%),
-        radial-gradient(circle at 85% 20%, rgba(0,132,255,.25), transparent 35%),
-        radial-gradient(circle at 50% 100%, rgba(0,255,180,.15), transparent 45%),
-        linear-gradient(
-            135deg,
-            #01040d 0%,
-            #04152d 25%,
-            #07244b 50%,
-            #04152d 75%,
-            #01040d 100%
-        );
+    /* Show the complete background area */
+    background-size: 100% 100%;
 
-    background-size: cover;
-    background-position: center;
+    background-color: #061d4d;
 }
 
-/* Large glow */
-header.masthead::before{
-    content:"";
-    position:absolute;
-    width:900px;
-    height:900px;
 
-    top:-350px;
-    right:-250px;
+/* ================================
+   TABLET
+   ================================ */
 
-    border-radius:50%;
+@media (max-width: 991.98px) {
 
-    background:radial-gradient(circle,
-            rgba(0,255,255,.25),
-            rgba(0,120,255,.12),
-            transparent 70%);
+    header.masthead {
+        margin-top: 70px;
 
-    filter:blur(120px);
+        min-height: calc(100vh - 70px);
 
-    animation:glowMove 10s ease-in-out infinite alternate;
-}
-
-/* Moving light effect */
-header.masthead::after{
-    content:"";
-    position:absolute;
-
-    width:220%;
-    height:220%;
-
-    top:-60%;
-    left:-60%;
-
-    background:
-        linear-gradient(
-            120deg,
-            transparent 40%,
-            rgba(255,255,255,.05) 50%,
-            transparent 60%
-        );
-
-    animation:shine 12s linear infinite;
-}
-
-/* Keep text above glow */
-header.masthead .container{
-    position:relative;
-    z-index:5;
-}
-
-header.masthead .masthead-subheading{
-    font-size:1.5rem;
-    font-style:italic;
-    line-height:1.5rem;
-    margin-bottom:25px;
-    color:#bdefff;
-
-    text-shadow:
-        0 0 10px rgba(0,255,255,.4),
-        0 0 20px rgba(0,180,255,.2);
-
-    font-family:"Roboto Slab",-apple-system,BlinkMacSystemFont,
-    "Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-}
-
-header.masthead .masthead-heading{
-
-    font-size:3.25rem;
-    font-weight:700;
-    line-height:3.25rem;
-    margin-bottom:2rem;
-
-    text-shadow:
-        0 0 12px rgba(0,200,255,.45),
-        0 0 35px rgba(0,100,255,.25);
-
-    font-family:"Montserrat",-apple-system,BlinkMacSystemFont,
-    "Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-}
-
-/* Animation */
-
-@keyframes glowMove{
-
-    from{
-        transform:translate(0,0) scale(1);
+        padding-top: 70px;
+        padding-bottom: 70px;
     }
+}
 
-    to{
-        transform:translate(-120px,60px) scale(1.2);
+
+/* ================================
+   MOBILE
+   ================================ */
+
+@media (max-width: 767.98px) {
+
+    header.masthead {
+        margin-top: 72px;
+
+        min-height: calc(100vh - 72px);
+
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+        background-position: center top;
+        background-size: 100% 100%;
     }
-
+}
+header.masthead .masthead-subheading {
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 1.5rem;
+  margin-bottom: 25px;
+  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+header.masthead .masthead-heading {
+  font-size: 3.25rem;
+  font-weight: 700;
+  line-height: 3.25rem;
+  margin-bottom: 2rem;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-@keyframes shine{
-
-    from{
-        transform:translateX(-25%) rotate(0deg);
-    }
-
-    to{
-        transform:translateX(25%) rotate(0deg);
-    }
-
-}
-
-/* Desktop */
-
-@media (min-width:768px){
-
-header.masthead{
-
-    padding-top:17rem;
-    padding-bottom:12.5rem;
-
-}
-
-header.masthead .masthead-subheading{
-
-    font-size:2.25rem;
-    line-height:2.25rem;
-    margin-bottom:2rem;
-
-}
-
-header.masthead .masthead-heading{
-
-    font-size:4.5rem;
-    line-height:4.5rem;
-    margin-bottom:4rem;
-
-}
-
+@media (min-width: 768px) {
+  header.masthead {
+    padding-top: 17rem;
+    padding-bottom: 12.5rem;
+  }
+  header.masthead .masthead-subheading {
+    font-size: 2.25rem;
+    font-style: italic;
+    line-height: 2.25rem;
+    margin-bottom: 2rem;
+  }
+  header.masthead .masthead-heading {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 4.5rem;
+    margin-bottom: 4rem;
+  }
 }
 #portfolio .portfolio-item {
   max-width: 26rem;
@@ -11439,348 +11371,53 @@ section#contact form#contactForm :-ms-input-placeholder {
   font-size: 0.9rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-/* ======================================
-   AI BACKGROUND
-====================================== */
 
-body{
-    background: radial-gradient(circle at top left,#0b4d8a 0%,#081a35 35%,#050d1e 70%,#020611 100%);
-    overflow-x:hidden;
+/* =================================
+   FIXED NAVBAR - ALWAYS VISIBLE
+   ================================= */
+
+#mainNav {
+    background-color: #061d4d !important;
+    opacity: 1 !important;
+    z-index: 1030;
 }
 
-/* Soft glowing lights */
-
-body::before{
-
-    content:"";
-
-    position:fixed;
-
-    width:700px;
-    height:700px;
-
-    top:-250px;
-    left:-250px;
-
-    background:#00d4ff;
-
-    opacity:.12;
-
-    filter:blur(180px);
-
-    border-radius:50%;
-
-    animation:glow1 10s ease-in-out infinite alternate;
-
-    z-index:-2;
-
+/* Navbar links */
+#mainNav .navbar-nav .nav-link {
+    color: #ffffff !important;
 }
 
-body::after{
-
-    content:"";
-
-    position:fixed;
-
-    width:600px;
-    height:600px;
-
-    right:-200px;
-    bottom:-200px;
-
-    background:#6b4dff;
-
-    opacity:.15;
-
-    filter:blur(160px);
-
-    border-radius:50%;
-
-    animation:glow2 12s ease-in-out infinite alternate;
-
-    z-index:-2;
-
+/* Hover */
+#mainNav .navbar-nav .nav-link:hover {
+    color: #ffc800 !important;
 }
 
-@keyframes glow1{
-
-from{
-
-transform:translate(0,0);
-
-}
-
-to{
-
-transform:translate(80px,40px);
-
-}
-
-}
-
-@keyframes glow2{
-
-from{
-
-transform:translate(0,0);
-
-}
-
-to{
-
-transform:translate(-60px,-50px);
-
-}
-
-}
-/* ======================================
-   STARS--lets create some animation
-====================================== */
-
-.stars{
-
-position:fixed;
-
-top:0;
-left:0;
-
-width:100%;
-height:100%;
-
-pointer-events:none;
-
-z-index:-1;
-
-overflow:hidden;
-
-}
-
-.star{
-
-position:absolute;
-
-width:2px;
-
-height:2px;
-
-background:white;
-
-border-radius:50%;
-
-opacity:.8;
-
-animation:twinkle 3s infinite alternate;
-
-box-shadow:
-0 0 8px white,
-0 0 15px #00d4ff;
-
-}
-
-@keyframes twinkle{
-
-0%{
-
-opacity:.2;
-transform:scale(1);
-
-}
-
-100%{
-
-opacity:1;
-transform:scale(1.8);
-
-}
-}
-/* ==============================
-   HERO SECTION
-============================== */
-
-.masthead {
-    position: relative;
-    min-height: 100vh;
-    overflow: hidden;
-}
-
-.masthead .container {
-    position: relative;
-    z-index: 5;
-}
-
-/* ==============================
-   AI ANIMATION
-============================== */
-
-
-
-/* AI animation container center */
-.ai-animation {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 600px;
-    height: 600px;
-    transform: translate(-50%, -50%);
+/* Brand */
+#mainNav .navbar-brand {
+    color: #ffc800 !important;
 }
 
 
-/* Center AI circle */
-.center-ai {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 120px;
-    height: 120px;
+/* =================================
+   MOBILE NAVBAR
+   ================================= */
 
-    transform: translate(-50%, -50%);
+@media (max-width: 991.98px) {
 
-    background: #00d9ff;
-    border-radius: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 55px;
-    font-weight: bold;
-    color: white;
-
-    box-shadow:
-        0 0 30px #00d9ff,
-        0 0 80px #00d9ff;
-}
-
-
-
-/* Orbit circles */
-.orbit {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    border: 1px solid rgba(0,220,255,0.3);
-    border-radius: 50%;
-
-    transform: translate(-50%, -50%);
-}
-
-
-/* Orbit sizes */
-.orbit1 {
-    width: 220px;
-    height: 220px;
-}
-
-.orbit2 {
-    width: 350px;
-    height: 350px;
-}
-
-.orbit3 {
-    width: 500px;
-    height: 500px;
-}
-
-
-
-/* Technology bubbles */
-.orbit span {
-
-    position: absolute;
-
-    background: rgba(0,40,80,0.9);
-    color:#00eaff;
-
-    padding:12px 18px;
-
-    border-radius:30px;
-
-    font-weight:bold;
-
-    box-shadow:
-    0 0 15px #00eaff;
-
-    animation: rotateText 15s linear infinite;
-}
-
-
-/* Positions */
-
-.orbit1 span:nth-child(1){
-    top:-20px;
-    left:50%;
-}
-
-.orbit1 span:nth-child(2){
-    right:-20px;
-    top:50%;
-}
-
-.orbit1 span:nth-child(3){
-    bottom:-20px;
-    left:50%;
-}
-
-.orbit1 span:nth-child(4){
-    left:-30px;
-    top:50%;
-}
-
-
-
-.orbit2 span:nth-child(1){
-    top:0;
-    left:50%;
-}
-
-.orbit2 span:nth-child(2){
-    right:0;
-    top:50%;
-}
-
-.orbit2 span:nth-child(3){
-    bottom:0;
-    left:50%;
-}
-
-.orbit2 span:nth-child(4){
-    left:0;
-    top:50%;
-}
-
-
-
-.orbit3 span:nth-child(1){
-    top:10%;
-    left:10%;
-}
-
-.orbit3 span:nth-child(2){
-    top:10%;
-    right:10%;
-}
-
-.orbit3 span:nth-child(3){
-    bottom:10%;
-    right:10%;
-}
-
-.orbit3 span:nth-child(4){
-    bottom:10%;
-    left:10%;
-}
-
-
-
-@keyframes rotateText {
-
-    from{
-        transform:rotate(0deg);
+    #mainNav {
+        background-color: #061d4d !important;
     }
 
-    to{
-        transform:rotate(360deg);
+    #mainNav .navbar-collapse {
+        background-color: #061d4d;
+        padding: 10px 0;
     }
 
+    #mainNav .navbar-nav .nav-link {
+        color: #ffffff !important;
+    }
+
+    #mainNav .navbar-nav .nav-link:hover {
+        color: #ffc800 !important;
+    }
 }
